@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "toolpackpro",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "C:/Users/shalom/toolpackpro.com", "-p", "3009", "--no-clipboard"],
+      "port": 3009
+    }
+  ]
+}
