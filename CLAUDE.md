@@ -4,29 +4,32 @@ Guidance for working on toolpackpro.com.
 
 ## Site architecture
 
-Static site, no build framework. Each page is a self-contained HTML file (inline CSS + JS),
-with one deliberate exception:
+Static site, no build framework. toolpackpro.com is the marketing/support site for
+ToolPack Pro's iOS app AquaLog. Each page is a self-contained HTML file (inline CSS + JS),
+no shared data files or build step.
 
-- `/nav-data.js` is the single source of truth for the "tool card" grid shown on `/` and
-  `/tools/`. Both pages load it via `<script src="/nav-data.js">` and render from the
-  `TOOL_NAV_DATA` array. **Never hand-copy tool entries into a page's inline script.** That's
-  exactly what caused a real bug: the homepage's copy of the tool list drifted out of sync
-  with /tools/'s copy, so 3 already-live tools (Paint, Concrete, Drywall) showed up as
-  "Coming Soon" with no link on the homepage.
+Current pages:
 
-## Adding a new tool
+- `/` — AquaLog marketing homepage
+- `/privacy/` — AquaLog privacy policy (real content, not a template — keep it accurate to
+  what the app actually collects; Apple checks this against the App Privacy nutrition label
+  in App Store Connect on every submission)
+- `/contact/` — Support page (routes to support@toolpackpro.com)
+- `404.html` — generic not-found page
 
-1. Build the tool's page at `/tools/<slug>/index.html`.
-2. Add its entry to `nav-data.js` with a `url` pointing to the new page. Entries without
-   `url` render as a non-clickable "Coming Soon" card.
-3. Add the page to `sitemap.xml`.
-4. Run `node scripts/check-nav-data.js` before publishing. It verifies every url in
-   nav-data.js resolves to a real file, is listed in sitemap.xml, and flags any
-   "Coming Soon" entry that already has a built page sitting on disk unlinked.
+The site previously carried an unrelated set of home-improvement calculator tools and blog
+posts (`/tools/`, `/blog/`, `/about/`, `/disclaimer/`, `/terms/`, plus `nav-data.js` /
+`articles-data.js` and their shared "tool card" grid pattern) left over from an earlier,
+different project. That content was removed since it had nothing to do with AquaLog or
+ToolPack Pro and was actively confusing for anyone (including Apple's review process)
+landing on the site. Don't reintroduce that pattern for AquaLog content — if a future
+ToolPack Pro app needs its own page, give it its own self-contained page under a clear path
+and add it to `sitemap.xml`, rather than reviving the old shared-data-file grid system.
 
-## Adding a blog article (once /blog exists)
+## Adding a new page
 
-Follow the same pattern as nav-data.js: put the article list in a shared
-`articles-data.js` file rather than duplicating it in `blog/index.html` and anywhere
-else articles are listed (e.g. a homepage "latest posts" section). Extend
-`scripts/check-nav-data.js` (or add a sibling script) to validate it the same way.
+1. Build the page as a self-contained `index.html` under its own directory (matches the
+   existing `/privacy/`, `/contact/` pattern).
+2. Add it to `sitemap.xml`.
+3. Keep footer/company-info text (operating entity: 温州美伊文化用品有限公司) consistent
+   across pages when adding new ones.
