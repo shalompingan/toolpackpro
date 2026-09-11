@@ -46,33 +46,28 @@
 <main>
   <div class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: [DATE]</p>
-
-    <div class="notice">
-      <b>Template — fill in before publishing</b>
-      This is a starting draft, not a finished legal document. Before submitting AquaLog to the App Store, edit every bracketed section below to match exactly what the app collects (Apple checks this against the app's App Privacy nutrition label in App Store Connect, and mismatches are a common rejection reason).
-    </div>
+    <p class="updated">Last updated: September 11, 2026</p>
 
     <p>AquaLog is made by ToolPack Pro ("we", "us"). This policy explains what information AquaLog collects, how it's used, and the choices you have.</p>
 
     <h2>Information we collect</h2>
     <ul>
-      <li><strong>Data you provide:</strong> [e.g. tank names, water parameter readings (pH, ammonia, nitrite, nitrate), water change and feeding schedule entries]</li>
-      <li><strong>Data collected automatically:</strong> [e.g. crash logs, anonymous usage analytics — name the SDK if you use one, such as Apple's own App Analytics]</li>
-      <li><strong>Data we do NOT collect:</strong> [state plainly what you don't touch — e.g. no location, no contacts, no photos — if true]</li>
+      <li><strong>Data you provide:</strong> tank names, tank size and type, water test readings (pH, ammonia, nitrite, nitrate, temperature), water change, feeding, and cleaning logs, livestock profiles (species, nickname, date acquired), equipment and food records, and photos you add of your tanks or livestock.</li>
+      <li><strong>Data collected automatically:</strong> crash reports, via the third-party SDK Sentry. We do not use Apple's App Analytics or any analytics/usage-tracking SDK, and Sentry's performance/session tracing is turned off (<code>tracesSampleRate = 0</code>) — Sentry only receives crash reports, not behavioral data.</li>
+      <li><strong>Data we do NOT collect:</strong> no location data, no contacts, no advertising identifiers, and no usage analytics or behavioral tracking.</li>
     </ul>
 
     <h2>How we use it</h2>
-    <p>[e.g. To run AquaLog's core features (parameter logging, water change and dosing calculators, feeding reminders), to fix bugs via crash reports, and to understand which features are used so we can improve the app.]</p>
+    <p>To run AquaLog's core features (tank and water-parameter logging, calculators, and reminders), to sync your data across your own devices if you're a Pro subscriber, and to find and fix bugs from crash reports.</p>
 
     <h2>Storage</h2>
-    <p>[State whether data stays on-device only, or is synced to a server/iCloud. Most single-purpose utility apps can honestly say "stored only on your device," which is simpler and lowers your compliance burden — confirm this matches what you actually built before publishing.]</p>
+    <p>On the free tier, your data is stored only on your device, in a local SwiftData database — it is never uploaded anywhere. If you upgrade to Pro (subscription or one-time purchase), your data is additionally synced through your own private iCloud account (Apple's CloudKit private database), so it stays in sync across your own devices. This iCloud data stays within your private CloudKit database — ToolPack Pro cannot see or access it. Crash reports are sent to Sentry's servers (see below).</p>
 
     <h2>Third parties</h2>
-    <p>[List any SDKs that receive data: analytics, crash reporting, ad networks, payment processors (e.g. Apple's own StoreKit for subscriptions). If you use none, say so.]</p>
+    <p>AquaLog uses <strong>Sentry</strong> for crash reporting only (performance and session tracking is disabled). Subscription and one-time purchases are processed by <strong>Apple's StoreKit</strong>; we don't receive your payment details. We do not use any advertising or analytics SDKs.</p>
 
     <h2>Your choices</h2>
-    <p>You can request deletion of any data associated with your use of AquaLog by emailing <a href="mailto:support@toolpackpro.com">support@toolpackpro.com</a> with your account details.</p>
+    <p>Free-tier data lives only on your device — deleting the app deletes your data. Pro-tier data lives in your own private iCloud account and can be removed from there or by deleting your data in-app. You can also request deletion of any data associated with your use of AquaLog by emailing <a href="mailto:support@toolpackpro.com">support@toolpackpro.com</a> with your account details.</p>
 
     <h2>Children's privacy</h2>
     <p>AquaLog is not directed at children under 13, and we do not knowingly collect data from children under 13.</p>
@@ -80,7 +75,7 @@
     <h2>Changes to this policy</h2>
     <p>We'll update the date at the top of this page when this policy changes. Continued use of an app after an update means you accept the revised policy.</p>
 
-        <h2>Contact</h2>
+    <h2>Contact</h2>
     <p>Questions about this policy: <a href="mailto:support@toolpackpro.com">support@toolpackpro.com</a></p>
 
     <h2>Company information</h2>
