@@ -48,28 +48,34 @@
 <main>
     <p class="app"><a href="/aqualog/">AquaLog</a></p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: September 11, 2026</p>
+    <p class="updated">Last updated: October 20, 2026</p>
 
-    <p>AquaLog is made by ToolPack Pro ("we", "us"). This policy explains what information AquaLog collects, how it's used, and the choices you have.</p>
+    <p>AquaLog is made by ToolPack Pro ("we", "us"). This policy explains what information AquaLog handles, where it is stored, and the choices you have.</p>
 
     <h2>Information we collect</h2>
     <ul>
-      <li><strong>Data you provide:</strong> tank names, tank size and type, water test readings (pH, ammonia, nitrite, nitrate, temperature), water change, feeding, and cleaning logs, livestock profiles (species, nickname, date acquired), equipment and food records, and photos you add of your tanks or livestock.</li>
-      <li><strong>Data collected automatically:</strong> crash reports, via the third-party SDK Sentry. We do not use Apple's App Analytics or any analytics/usage-tracking SDK, and Sentry's performance/session tracing is turned off (<code>tracesSampleRate = 0</code>) — Sentry only receives crash reports, not behavioral data.</li>
-      <li><strong>Data we do NOT collect:</strong> no location data, no contacts, no advertising identifiers, and no usage analytics or behavioral tracking.</li>
+      <li><strong>Data you enter:</strong> tank names, tank size and type, water test readings, water change, feeding and cleaning logs, livestock (species, nickname, date added), equipment and food, reminder settings, and photos you add of your tanks or livestock. This data stays on your device and in your own iCloud account (see Storage and iCloud sync below). We can't see it.</li>
+      <li><strong>Crash reports:</strong> if AquaLog crashes, a crash report is sent to Sentry, the only third-party service in the app. A crash report contains technical details: the app version, device model, iOS version, and where in the code the crash happened. Sentry is set up not to collect personal information (<code>sendDefaultPii = false</code>), not to take screenshots, and not to record performance or usage (<code>tracesSampleRate = 0</code>). Crash reports don't include your tank data or photos.</li>
+      <li><strong>Data we don't collect:</strong> AquaLog has no accounts and we run no server of our own. The app doesn't collect your name, email address, location, contacts or advertising identifier, shows no ads, contains no analytics, and doesn't track you across other apps or websites. We don't sell or share personal data.</li>
     </ul>
 
     <h2>How we use it</h2>
-    <p>To run AquaLog's core features (tank and water-parameter logging, calculators, and reminders), to sync your data across your own devices if you're a Pro subscriber, and to find and fix bugs from crash reports.</p>
+    <p>The data you enter is used only inside the app, to show your tanks, logs, charts and reminders. Reminders are scheduled on your device as local notifications. Crash reports are used only to find and fix bugs.</p>
 
-    <h2>Storage</h2>
-    <p>On the free tier, your data is stored only on your device, in a local SwiftData database — it is never uploaded anywhere. If you upgrade to Pro (subscription or one-time purchase), your data is additionally synced through your own private iCloud account (Apple's CloudKit private database), so it stays in sync across your own devices. This iCloud data stays within your private CloudKit database — ToolPack Pro cannot see or access it. Crash reports are sent to Sentry's servers (see below).</p>
+    <h2>Storage and iCloud sync</h2>
+    <p>Your data is stored on your device. For every user, free or Pro, AquaLog also syncs it through Apple's iCloud (the CloudKit private database) to your own iCloud account, so it stays the same on your iPhone and iPad. Only you can access that data; ToolPack Pro cannot see or access it. If you aren't signed in to iCloud, or you turn off iCloud for AquaLog in the Settings app, your data stays on that device only and isn't synced.</p>
+
+    <h2>Purchases</h2>
+    <p>AquaLog is free to use with one tank. AquaLog Pro, which removes the one-tank limit, is offered as a monthly or a yearly auto-renewing subscription, or as a one-time lifetime purchase. All purchases are processed by Apple through the App Store using <strong>StoreKit</strong>; we never receive your payment details. The app only asks Apple whether Pro is active for your Apple Account. Subscriptions renew automatically until you cancel them, which you can do at any time in Settings → [your name] → Subscriptions, at least 24 hours before the current period ends.</p>
+
+    <h2>Exporting and sharing</h2>
+    <p>When you export your test records as a CSV file, or send us feedback by email, the file or message leaves your device only when you choose to share or send it, and only to the place you pick. Feedback emails are pre-filled with the app version, device model and iOS version to help us answer; you can remove these lines before sending.</p>
 
     <h2>Third parties</h2>
-    <p>AquaLog uses <strong>Sentry</strong> for crash reporting only (performance and session tracking is disabled). Subscription and one-time purchases are processed by <strong>Apple's StoreKit</strong>; we don't receive your payment details. We do not use any advertising or analytics SDKs.</p>
+    <p>AquaLog uses <strong>Sentry</strong> for crash reports only (as described above), and <strong>Apple</strong> for iCloud sync and App Store purchases. We do not use any advertising or analytics SDKs.</p>
 
     <h2>Your choices</h2>
-    <p>Free-tier data lives only on your device — deleting the app deletes your data. Pro-tier data lives in your own private iCloud account and can be removed from there or by deleting your data in-app. You can also request deletion of any data associated with your use of AquaLog by emailing <a href="mailto:support@toolpackpro.com">support@toolpackpro.com</a> with your account details.</p>
+    <p>Deleting a tank or a record in AquaLog removes it from your device and, when iCloud sync is on, from your iCloud account too. Deleting the app removes the copy on that device; to remove the synced copy as well, go to Settings → [your name] → iCloud → Manage Account Storage → AquaLog. Because your tank data never reaches us, there is nothing for us to delete on our side. If you have questions about crash reports, email <a href="mailto:support@toolpackpro.com">support@toolpackpro.com</a>.</p>
 
     <h2>Children's privacy</h2>
     <p>AquaLog is not directed at children under 13, and we do not knowingly collect data from children under 13.</p>
