@@ -18,6 +18,9 @@ Current pages:
   accurate to what the app actually collects; Apple checks this against the App Privacy
   nutrition label in App Store Connect on every submission)
 - `/aqualog/support/` — Support page (routes to support@toolpackpro.com)
+- `/statelight/privacy/`, `/statelight/support/` — Statelight's privacy policy and support
+  page (same rules as AquaLog's). No `/statelight/` app page yet; it comes after launch.
+  Accent: the app's navy `#0D1524`, with its amber `#F4B942` as the small bar above the title.
 - `404.html` — generic not-found page
 - `_redirects` — Cloudflare Pages redirects from the old `/privacy/`, `/contact/` and
   `/support/` paths to the pages above
