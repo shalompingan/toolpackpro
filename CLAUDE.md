@@ -21,6 +21,8 @@ Current pages:
 - `/statelight/privacy/`, `/statelight/support/` — Statelight's privacy policy and support
   page (same rules as AquaLog's). No `/statelight/` app page yet; it comes after launch.
   Accent: the app's navy `#0D1524`, with its amber `#F4B942` as the small bar above the title.
+- `/textproof/privacy/`, `/textproof/support/` — Textproof's privacy policy and support page
+  (same rules as AquaLog's). No `/textproof/` app page yet. Accent: the app's blue `#2F5D9A`.
 - `404.html` — generic not-found page
 - `_redirects` — Cloudflare Pages redirects from the old `/privacy/`, `/contact/` and
   `/support/` paths to the pages above
