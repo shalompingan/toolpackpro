@@ -23,6 +23,11 @@ Current pages:
   Accent: the app's navy `#0D1524`, with its amber `#F4B942` as the small bar above the title.
 - `/textproof/privacy/`, `/textproof/support/` — Textproof's privacy policy and support page
   (same rules as AquaLog's). No `/textproof/` app page yet. Accent: the app's blue `#2F5D9A`.
+- `/bellby/privacy/`, `/bellby/support/` — Bellby's privacy policy and support page (same
+  rules as AquaLog's). No `/bellby/` app page yet. The privacy text is also shown inside the
+  app (Settings → Privacy Policy), so change both together. Accent: the app's teal — `#179B90`
+  for the bar above the title, `#0F6F68` for links and the button (the lighter teal is too
+  faint as text on the off-white background).
 - `404.html` — generic not-found page
 - `_redirects` — Cloudflare Pages redirects from the old `/privacy/`, `/contact/` and
   `/support/` paths to the pages above
